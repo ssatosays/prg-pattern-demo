@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}index{% endblock %}
+
+{% block content %}
+<div>
+  <form method="post" name="usr_form" action="/post_only">
+    <input type="hidden" name="usr_name" value="usr_name">
+    <input type="hidden" name="usr_age" value="usr_age">
+    <a href="javascript:usr_form.submit()">submit</a>
+  </form>
+</div>
+<div>
+  <form method="post" name="shop_form" action="/post_redirect">
+    <input type="hidden" name="shop_name" value="shop_name">
+    <input type="hidden" name="shop_age" value="shop_age">
+    <a href="javascript:shop_form.submit()">submit</a>
+  </form>
+</div>
+{% endblock %}
